@@ -1,0 +1,36 @@
+body {
+  margin-top: 60px;
+  background: url('images/ignasi.png')
+}
+.game-button {
+  cursor: pointer;
+  width: 49%;
+  /*margin-bottom: 2%;*/
+  float: left;
+  position: relative;
+  border-radius: 5px;
+}
+.game-button:after {
+  content: '';
+  display: block;
+  padding-top: 50%;
+  */
+}
+.game-button.red {
+  background-color: #c0392b;
+}
+.active {
+  opacity: 0.6;
+}
+.game-button.yellow {
+  background-color: #f39c12;
+}
+.game-button.green {
+  background-color: #27ae60;
+}
+.game-button.blue {
+  background-color: #2980b9;
+}
+.container {
+  max-width: 768px;
+}
