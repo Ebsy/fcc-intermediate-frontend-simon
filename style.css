@@ -1,36 +1,62 @@
 body {
-  margin-top: 60px;
   background: url('images/ignasi.png')
 }
 .game-button {
   cursor: pointer;
-  width: 49%;
-  /*margin-bottom: 2%;*/
-  float: left;
-  position: relative;
-  border-radius: 5px;
-}
-.game-button:after {
-  content: '';
+  width: 165px;
+  height: 165px;
   display: block;
-  padding-top: 50%;
-  */
+  float: left;
+  position: inherit;
+  ;
+  /*border-radius: 5px;*/
 }
 .game-button.red {
   background-color: #c0392b;
+  border-top-left-radius: 100%;
+  box-shadow: 0 1px 2px #fff, /*bottom external highlight*/
+  0 -1px 1px #666, /*top external shadow*/
+  inset 0 -1px 1px rgba(0, 0, 0, 0.5), /*bottom internal shadow*/
+  inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  /*top internal highlight*/
 }
 .active {
   opacity: 0.6;
+  /*border: 5px solid #000;*/
 }
 .game-button.yellow {
   background-color: #f39c12;
+  border-top-right-radius: 100%;
+  box-shadow: 0 1px 2px #fff, /*bottom external highlight*/
+  0 -1px 1px #666, /*top external shadow*/
+  inset 0 -1px 1px rgba(0, 0, 0, 0.5), /*bottom internal shadow*/
+  inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  /*top internal highlight*/
 }
 .game-button.green {
   background-color: #27ae60;
+  border-bottom-left-radius: 100%;
+  box-shadow: 0 1px 2px #fff, /*bottom external highlight*/
+  0 -1px 1px #666, /*top external shadow*/
+  inset 0 -1px 1px rgba(0, 0, 0, 0.5), /*bottom internal shadow*/
+  inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  /*top internal highlight*/
 }
 .game-button.blue {
   background-color: #2980b9;
+  border-bottom-right-radius: 100%;
+  box-shadow: 0 1px 2px #fff, /*bottom external highlight*/
+  0 -1px 1px #666, /*top external shadow*/
+  inset 0 -1px 1px rgba(0, 0, 0, 0.5), /*bottom internal shadow*/
+  inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  /*top internal highlight*/
 }
 .container {
+  /*position: relative;*/
+  margin-top: 60px;
   max-width: 768px;
+}
+#board {
+  width: 330px;
+  margin: 25px auto;
 }

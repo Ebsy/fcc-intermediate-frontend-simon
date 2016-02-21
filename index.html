@@ -17,15 +17,33 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <div class="navbar-brand"> <i class="fa fa-fire fa-fw"></i>
-          <span>freeCodeCamp</span>
+        <div class="navbar-brand">
+          <a style="color:#ddd;text-decoration:none;" target="_blank" href="http://www.freecodecamp.com/Ebsy">
+            <span>freeCodeCamp (
+              <i class="fa fa-fire"></i> )</span>
+          </a>
         </div>
       </div>
       <div id="NavBar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a target="_blank" href="https://github.com/Ebsy"><i class="fa fa-github fa-fw"></i><span>GitHub</span></a></li>
-          <li><a target="_blank" href="http://www.facebook.com/neilebrey"><i class="fa fa-facebook-square fa-fw"></i><span>Facebook</span></a></li>
-          <li><a target="_blank" href="mailto:neil.ebrey@gmail.com"><i class="fa fa-google fa-fw"></i><span>Email</span></a></li>
+          <li>
+            <a target="_blank" href="https://github.com/Ebsy">
+              <i class="fa fa-github fa-fw"></i>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://www.facebook.com/neilebrey">
+              <i class="fa fa-facebook-square fa-fw"></i>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="mailto:neil.ebrey@gmail.com">
+              <i class="fa fa-google fa-fw"></i>
+              <span>Email</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -33,27 +51,63 @@
 
   <div class="container">
     <h1 class="text-center">FCC Simon Game</h1>
-    <div class="row clearfix">
-      <div class="game-button red" id="red">
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Instructions...</h2>
+        <!-- <div> -->
+        <ul class="list-group">
+          <li class="list-item">Click anywhere on the board to start.</li>
+          <li class="list-item">Try to remember the pattern</li>
+          <li class="list-item">Click the colors in the correct sequence</li>
+        </ul>
+        <!-- </div> -->
+      </div>
+      <div class="col-sm-6">
 
+        <div id="board">
+          <div class="row">
+            <div class="game-button red" id="red">
+
+            </div>
+
+            <div class="game-button yellow" id="yellow">
+
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="game-button green" id="green">
+
+            </div>
+
+            <div class="game-button blue" id="blue">
+
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="game-button yellow" id="yellow">
+    </div>
+    <div id="gameover" class="modal fade" role="dialog">
+      <div class="modal-dialog">
 
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <h4 id="text" class="modal-title"></h4>
+          </div>
+          <div class="modal-body text-center">
+            <p>Game Over, try again!</p>
+            <button class="btn btn-lg btn-success" data-dismiss="modal">OK</button>
+          </div>
+        </div>
       </div>
     </div>
 
-
-
-    <div class="row clearfix">
-      <div class="game-button green" id="green">
-
-      </div>
-
-      <div class="game-button blue" id="blue">
-
-      </div>
-    </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" charset="utf-8"></script>

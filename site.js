@@ -17,17 +17,27 @@ function pickRandom() {
   return ret;
 }
 
+var gameStarted = false;
+
 
 $(document).ready(function() {
-  Simon.newRound();
+
 
   $('.game-button').on('click', function() {
+    if (!gameStarted) {
+      Simon.newRound();
+      gameStarted = true;
+      return;
+    }
     var self = this;
     $(self).addClass('active');
     Simon.userInput.push('#' + $(self).attr('id'));
     console.log("USER: " + Simon.userInput);
     if (!Simon.checkSequence()) {
-      //End game
+      $('.game-button').removeClass('active');
+      gameStarted = false;
+      Simon.currentChain = [];
+      Simon.userInput = [];
       return;
     }
     if (Simon.userInput.length === Simon.currentChain.length) {
@@ -48,8 +58,11 @@ var Simon = {
     if (self.currentChain[self.userInput.length - 1] === self.userInput[self.userInput.length - 1]) {
       return true;
     }
-    alert('owned!');
-    return false
+    //alert('owned!');
+    $('#gameover').modal({
+      backdrop: 'static',
+      keyboard: false
+    });
   },
   newRound: function() {
     var self = this;
